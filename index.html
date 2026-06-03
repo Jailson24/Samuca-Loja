@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -158,11 +158,11 @@
                     <img src="./logo.jpg" alt="Logo Samuca" class="w-12 h-12 rounded-full border-2 border-white shadow-md object-cover bg-pink-100" onerror="this.style.display='none'">
                     <h1 class="text-3xl font-serif font-bold text-white">Vendas Samuca</h1>
                 </div>
-                <p class="text-brand-100 text-sm opacity-90">Vitrine, Stock e Produtos</p>
+                <p class="text-brand-100 text-sm opacity-90">Vitrine, Estoque e Produtos</p>
             </div>
             
             <!-- Botão de Resumo -->
-            <button type="button" onclick="window.abrirResumoEstoque()" class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md text-white hover:bg-white/30 rounded-xl flex items-center justify-center text-lg transition shadow-sm border border-white/30 btn-only-admin" title="Resumo do Stock">
+            <button type="button" onclick="window.abrirResumoEstoque()" class="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-md text-white hover:bg-white/30 rounded-xl flex items-center justify-center text-lg transition shadow-sm border border-white/30 btn-only-admin" title="Resumo do Estoque">
                 <i class="fas fa-clipboard-list"></i>
             </button>
         </div>
@@ -170,7 +170,7 @@
         <div id="tela-categorias" class="max-w-4xl mx-auto">
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8" id="grid-categorias"></div>
 
-            <h3 class="text-xl font-serif font-bold text-brand-900 mb-4 ml-2 mt-4 flex items-center gap-2 btn-only-admin"><i class="fas fa-magic text-accent-500 text-sm"></i> Inteligência de Stock</h3>
+            <h3 class="text-xl font-serif font-bold text-brand-900 mb-4 ml-2 mt-4 flex items-center gap-2 btn-only-admin"><i class="fas fa-magic text-accent-500 text-sm"></i> Inteligência de Estoque</h3>
             <div id="cards-estoque-inteligente" class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 btn-only-admin"></div>
         </div>
 
@@ -217,7 +217,7 @@
             <div class="absolute inset-0 bg-gradient-to-t from-brand-900/90 to-brand-900/20 flex items-end justify-between p-6">
                 <div>
                     <h1 class="text-3xl font-serif font-bold text-white mb-1">Clientes</h1>
-                    <p class="text-brand-100 text-sm opacity-90">A sua lista de contactos fiéis</p>
+                    <p class="text-brand-100 text-sm opacity-90">A sua lista de contatos fiéis</p>
                 </div>
                 <button type="button" onclick="window.abrirModalCliente()" class="w-12 h-12 bg-white text-brand-900 rounded-2xl shadow-lg flex items-center justify-center text-xl active:scale-95 transition"><i class="fas fa-user-plus"></i></button>
             </div>
@@ -865,7 +865,7 @@
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 shrink-0">
                 <button type="button" onclick="window.fecharPreviewRelatorio()" class="bg-slate-100 text-slate-600 font-bold py-3 rounded-xl active:scale-95">Voltar</button>
                 <button type="button" onclick="window.baixarPlanilhaCSV()" class="bg-emerald-500 text-white font-bold py-3 rounded-xl shadow-lg active:scale-95 flex justify-center items-center gap-2 text-[11px] sm:text-xs">
-                    <i class="fas fa-file-excel text-lg"></i> Folha Excel
+                    <i class="fas fa-file-excel text-lg"></i> Planilha (CSV)
                 </button>
                 <button type="button" onclick="window.enviarRelatorioWhatsapp()" class="bg-green-500 text-white font-bold py-3 rounded-xl shadow-lg active:scale-95 flex flex-col justify-center items-center gap-1 text-[10px] sm:text-xs">
                     <i class="fab fa-whatsapp text-lg"></i> WhatsApp
@@ -902,7 +902,7 @@
                 <textarea id="cli-endereco" placeholder="Endereço Completo" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none h-20"></textarea>
                 <div class="flex gap-3 mt-2">
                     <button type="button" onclick="document.getElementById('modal-cliente').classList.add('hidden-screen')" class="flex-1 bg-slate-100 text-slate-600 font-bold py-3 rounded-xl">Cancelar</button>
-                    <button type="button" onclick="window.salvarNovoCliente()" class="flex-1 bg-brand-600 text-white font-bold py-3 rounded-xl shadow-lg">Guardar</button>
+                    <button type="button" onclick="window.salvarNovoCliente()" class="flex-1 bg-brand-600 text-white font-bold py-3 rounded-xl shadow-lg">Salvar</button>
                 </div>
             </div>
         </div>
@@ -934,7 +934,7 @@
                 </div>
             </div>
             
-            <h4 class="font-bold text-slate-700 text-sm mb-2 shrink-0 border-t border-slate-100 pt-4">Lista de Produtos em Stock</h4>
+            <h4 class="font-bold text-slate-700 text-sm mb-2 shrink-0 border-t border-slate-100 pt-4">Lista de Produtos em Estoque</h4>
             <div id="lista-resumo-produtos" class="flex-1 overflow-y-auto custom-scrollbar flex flex-col gap-2 mb-4 bg-slate-50 p-2 rounded-xl border border-slate-100">
                 <!-- Preenchido via Javascript -->
             </div>
@@ -966,7 +966,7 @@
                 </select>
                 <div class="flex gap-3 mt-2">
                     <button type="button" onclick="window.fecharModalNovaCategoria()" class="flex-1 bg-slate-100 text-slate-600 font-bold py-3 rounded-xl">Cancelar</button>
-                    <button type="button" onclick="window.salvarNovaCategoria()" class="flex-1 bg-brand-600 text-white font-bold py-3 rounded-xl shadow-lg">Guardar</button>
+                    <button type="button" onclick="window.salvarNovaCategoria()" class="flex-1 bg-brand-600 text-white font-bold py-3 rounded-xl shadow-lg">Salvar</button>
                 </div>
             </div>
         </div>
@@ -1060,7 +1060,7 @@
                 await signInWithEmailAndPassword(auth, document.getElementById('login-email').value, document.getElementById('login-senha').value); 
             } catch(e) { 
                 document.getElementById('app-loader').classList.add('hidden-screen'); 
-                alert("Erro no login."); 
+                alert("Erro no login. Verifique se o E-mail e Palavra-passe estão corretos."); 
             } 
         };
         
@@ -1330,9 +1330,9 @@
         window.salvarConfigWpp = () => { window.configSistema.linkWhatsAppGroup = document.getElementById('config-link-wpp').value; window.saveDB(); window.showToast("Salvo."); };
         window.toggleSeguranca = () => { window.configSistema.modoSeguranca = document.getElementById('toggle-seguranca').checked; window.saveDB(); window.showToast("Segurança alterada."); window.renderCategorias(); window.renderProdutos(); window.renderFichasTecnicas(); window.renderDespesas(); };
         
-        window.fmtMoeda = v => new Intl.NumberFormat('pt-PT', { style: 'currency', currency: 'EUR' }).format(v||0);
-        window.fmtDataHora = s => new Date(s).toLocaleString('pt-PT', { dateStyle: 'short', timeStyle: 'short' });
-        window.fmtData = s => new Date(s).toLocaleDateString('pt-PT');
+        window.fmtMoeda = v => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(v||0);
+        window.fmtDataHora = s => new Date(s).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' });
+        window.fmtData = s => new Date(s).toLocaleDateString('pt-BR');
         window.guid = () => Date.now().toString(36) + Math.random().toString(36).substr(2,5);
         
         window.showToast = m => { 
@@ -1386,7 +1386,7 @@
             document.getElementById('resumo-estoque-venda').textContent = window.fmtMoeda(totalValorEstoque); 
             document.getElementById('resumo-estoque-lucro').textContent = window.fmtMoeda(totalValorEstoque - custoTotal);
             
-            document.getElementById('lista-resumo-produtos').innerHTML = html || '<p class="text-xs text-center text-slate-400 py-4">Sem produtos em stock.</p>';
+            document.getElementById('lista-resumo-produtos').innerHTML = html || '<p class="text-xs text-center text-slate-400 py-4">Sem produtos em estoque.</p>';
             document.getElementById('modal-resumo-estoque').classList.remove('hidden-screen');
         };
 
@@ -1414,7 +1414,7 @@
             if(containerCartoes) {
                 containerCartoes.innerHTML = `
                     <div class="bg-white p-5 rounded-2xl border shadow-sm">
-                        <p class="text-[10px] font-bold text-slate-400 uppercase">Valor em Stock</p>
+                        <p class="text-[10px] font-bold text-slate-400 uppercase">Valor em Estoque</p>
                         <p class="text-2xl font-black text-brand-600">${window.fmtMoeda(totalValorEstoque)}</p>
                     </div>`;
             }
@@ -1513,7 +1513,7 @@
         
         window.salvarNovoItemNoEstoque = (id) => { 
             const p = window.dbProdutos.find(x => x.id === id); 
-            if(!p.nome || !p.custo || p.estoque <= 0) return alert("Preencha Nome, Custo e Stock!"); 
+            if(!p.nome || !p.custo || p.estoque <= 0) return alert("Preencha Nome, Custo e Estoque!"); 
             delete p.isDraft; 
             window.saveDB(); 
             window.renderProdutos(); 
@@ -1810,7 +1810,7 @@
             const ctx = canvas.getContext('2d');
             const ag = {};
             window.dbVendas.forEach(v => {
-                const d = new Date(v.data).toLocaleDateString('pt-PT', { day: '2-digit', month: '2-digit' }); 
+                const d = new Date(v.data).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }); 
                 ag[d] = (ag[d] || 0) + v.valor;
             });
             
@@ -1825,7 +1825,7 @@
                 data: { 
                     labels: Object.keys(ag), 
                     datasets: [{ 
-                        label: 'Faturação Diária (€)', 
+                        label: 'Faturação Diária (R$)', 
                         data: Object.values(ag), 
                         borderColor: '#2563eb', 
                         backgroundColor: '#bfdbfe', 
