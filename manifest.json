@@ -1,4 +1,5 @@
 {
+{
   "name": "Gestor de Vendas Samuca",
   "short_name": "Vendas Samuca",
   "start_url": "./index.html",
@@ -8,16 +9,17 @@
   "description": "Gestão de Estoque, Vendas e Financeiro Offline",
   "icons": [
     {
-      "src": "./logo.jpg",
+      "src": "./logo-192.png",
       "sizes": "192x192",
-      "type": "image/jpeg",
-      "purpose": "any"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
-      "src": "./logo.jpg",
+      "src": "./logo-512.png",
       "sizes": "512x512",
-      "type": "image/jpeg",
-      "purpose": "any"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
+}
 }
